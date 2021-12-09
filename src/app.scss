@@ -1,0 +1,30 @@
+@import "~bootstrap/scss/bootstrap";
+@import './global.scss';
+
+.app{
+    height: 100vh;
+    background-color: $maincolor;
+}
+.sections{
+    width: 100%;
+    height: calc(100vh - 70px) ;
+    max-height: 100vh;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    &::-webkit-scrollbar{
+        width: 5px;
+        background-color: $maincolor;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: rgba(25,222,250,0.75);
+        box-shadow: -6px 10px 42px 8px rgba(25,222,250,0.75);
+        border-radius:8px;
+        filter: blur(3px);
+    }
+    > *{
+        width: 100vw;
+        height: calc(100vh - 70px) ;
+        max-height: 100vh;
+        scroll-snap-align: start;
+    }
+}
