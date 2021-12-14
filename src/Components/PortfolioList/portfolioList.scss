@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+.li-p{
+    letter-spacing: 2px;
+    font-family: 'Quicksand', sans-serif;
+    color: #255784;
+    transition: .5s;
+    background: #99DDCC ;
+    box-shadow: 0 0 10px #99DDCC, 0 0 40px #99DDCC;
+}
+
+.li-p:hover{
+    color: #255784;
+    background: #1DB9C3 ;
+    box-shadow: 0 0 10px #1DB9C3, 0 0 40px #1DB9C3;
+    cursor: pointer;
+}
+
+.activo{
+    color: #5a092f;
+    background: #FF0075 ;
+    box-shadow: 0 0 10px #FF0075, 0 0 40px #FF0075; ;
+}

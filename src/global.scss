@@ -1,2 +1,21 @@
 $maincolor: #171717;
 $listborder : 2px solid black;
+
+$smph: '(max-width: 800px)';
+
+$tablett:'(min-width:480px) and (max-width: 800px)';
+
+@mixin mobile {
+    @media screen and #{$smph} {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media screen and #{$tablett} {
+        @content
+    }
+};
+
+
+

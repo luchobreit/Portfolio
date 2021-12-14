@@ -1,6 +1,85 @@
 @import '../../global.scss';
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 .portfolio{
+    width: 100%;
+    height: 100%;
     background-color: $maincolor;
     border-bottom: $listborder;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    
+}
+.titulo-p{
+    color: whitesmoke;
+    margin-top: 1%;
+    font-size: 3em;
+    overflow-y: hidden;
+    object-fit: cover;
+}
+
+
+.ul-p{
+    height: 20%;
+    display: flex;
+    width: 100%;
+    margin-top: 2%;
+    justify-content: space-around;
+    position: relative;
+    flex-wrap: wrap;
+    li{
+        font-size: larger;
+        overflow-y: hidden;
+        align-self: center;
+        border-radius: 10px;
+        padding: 4px;
+        @include mobile{
+            font-size: small;
+        }
+    }
+}
+
+
+.portfolio-cards{
+    display: flex;
+    height: 80%;
+    width: 30%;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2%;
+    transition: .8s;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    p{
+        position: absolute;
+        color: white;
+        width: 50%;
+        text-align: center;
+        font-size: large;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+    }
+    &:hover{
+        background: rgb(3, 41, 43);
+        img{
+            opacity: .2;
+        }
+    }
+    a{
+        overflow: hidden;
+        color: #1DB9C3;
+    }
+    @include mobile{
+        width: 80%
+    }
 }
