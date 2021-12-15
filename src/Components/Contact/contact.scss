@@ -29,6 +29,9 @@
         @include mobile{
             width: 70%;
         }
+        @include tablet{
+            width: 30%;
+        }
     }
 }
 
@@ -92,5 +95,22 @@
     @include mobile{
         width: 50%;
     }
+    @include tablet{
+        width: 30%;
+        height: 30%;
+    }
 }
 
+.in:hover{
+    box-shadow: -9px 17px 42px 24px rgba(0,127,181,0.89);
+    border-radius: 15px;
+}
+.wpp:hover{
+    box-shadow: -9px 17px 42px 24px rgba(16,135,79,0.89);
+    border-radius: 50%;
+    background: rgba(5, 61, 35, 0.89) ;
+}
+.ig:hover{
+    box-shadow: -9px 17px 42px 24px rgba(135,16,102,0.89);
+    border-radius: 15px;
+}
