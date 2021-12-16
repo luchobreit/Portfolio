@@ -1,0 +1,29 @@
+[33mcommit e9efc2f4e2eca4a1c8c553090621c43b60845d76[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: luchobreit <luciobreit@gmail.com>
+Date:   Wed Dec 15 09:47:17 2021 -0300
+
+    segunda subida a hosting
+
+[33mcommit d8ccb1ac8c937a9c4f85b0c75e189efc48da7daf[m
+Author: luchobreit <luciobreit@gmail.com>
+Date:   Tue Dec 14 23:03:33 2021 -0300
+
+    primer subida a hosting
+
+[33mcommit 268529c5881c0054d2ea1a7053f6015fc2b97b82[m
+Author: luchobreit <luciobreit@gmail.com>
+Date:   Tue Dec 14 17:46:33 2021 -0300
+
+    commit final?
+
+[33mcommit 29f52421bf193943038dbd58f536ea9320eeb246[m
+Author: luchobreit <luciobreit@gmail.com>
+Date:   Wed Dec 8 23:13:23 2021 -0300
+
+    primer commit
+
+[33mcommit c057eea7ac2b4df043bdb83337889283758b3075[m
+Author: luchobreit <luciobreit@gmail.com>
+Date:   Mon Dec 6 12:53:39 2021 -0300
+
+    Initialize project using Create React App
