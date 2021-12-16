@@ -81,6 +81,7 @@
         color: #1DB9C3;
     }
     @include mobile{
-        width: 80%
+        width: 80%;
+        height: 60%;
     }
 }

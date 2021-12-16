@@ -1,22 +1,51 @@
 import "./contact.scss"
-import { useState, useRef } from "react";
+import {useRef } from "react";
+import toast, { Toaster } from 'react-hot-toast';
 import emailjs from 'emailjs-com';
 
 
 function Contact() {
-    const [complete, setComplete] = useState(false)
-    const form = useRef();  
+    const form = useRef();
+    const notify = (error)=>{
+        if (error){
+            toast('Ups hubo un error, pero hay cananales alternativos para contactarme',
+                {
+                    icon: '❌',
+                    style: {
+                    borderRadius: '10px',
+                    background: '#333',
+                    color: '#fff',
+                    },
+                }
+            );
+        } else{
+
+                toast('Gracias responderé lo mas rapido posible',
+                    {
+                        icon: '🔥',
+                        style: {
+                        borderRadius: '10px',
+                        background: '#333',
+                        color: '#fff',
+                        },
+                    }
+                );
+            }  
+        }     
+
+        
     const sendEmail = (e) => {
         e.preventDefault();
     
         emailjs.sendForm('service_r8xzly2', 'template_nqwlnj5', form.current, 'user_owJYa9C0g94ladlw9mtK7')
           .then((result) => {
-             alert(result.text);
-              setComplete(true)
+            notify(false)
+            e.target.reset()
+            console.log(result);
           }, (error) => {
-              console.log(error.text);
+              notify(true)
+              console.log(error);
           });
-        e.target.reset()
       };
     return (
         
@@ -28,16 +57,11 @@ function Contact() {
 
             <div className="right-c">
                 <form ref={form} onSubmit={sendEmail}className="form-c">
-                    <input autoComplete="off" required type="mail" name="mail" placeholder="Mail" className="input mail" />
+                    <input autoComplete="off" required type="email" name="mail" placeholder="Mail" className="input mail" />
                     <input autoComplete="off" required type="text" name="nombre" placeholder="Nombre" className="input mail" />
                     <textarea className="texto" required name="text" placeholder="Mensaje"/>
                     
                     <button className="button" > Enviar </button>
-                    {complete ?
-                        <h3>Gracias respondere lo más rapido posible</h3>
-                        :
-                        <></>
-                    }
                 </form>
                 <div className="redes-container">
                 <a href="https://www.instagram.com/luchobreit_/" target="_blank" className="link-c"><img src="/img/RRSS/instagram2.png" alt="ig" className="rrss ig" ></img></a>
@@ -46,6 +70,7 @@ function Contact() {
                 </div>
 
             </div>
+            <Toaster position="bottom-center" />
         </div>
     )
 }
